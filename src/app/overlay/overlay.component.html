@@ -1,0 +1,26 @@
+<ul class="list">
+  <li *ngFor="let item of list">
+    <span>{{item.name}}</span>
+    <i (click)="show($event, item)" ></i>
+  </li>
+</ul>
+
+
+<ng-template #operationTpl let-item>
+  <ul class="op">
+    <li (click)="deleteItem(item)">删除</li>
+    <li (click)="deleteItem(item)">删除</li>
+    <li (click)="deleteItem(item)">删除</li>
+    <li (click)="deleteItem(item)">删除</li>
+    <li (click)="deleteItem(item)">删除</li>
+    <li (click)="deleteItem(item)">删除</li>
+    <li (click)="deleteItem(item)">删除</li>
+    <li (click)="deleteItem(item)">删除</li>
+    <li (click)="deleteItem(item)">删除</li>
+    <li (click)="deleteItem(item)">删除</li>
+    <li (click)="deleteItem(item)">删除</li>
+    <li (click)="deleteItem(item)">删除</li>
+    <li (click)="deleteItem(item)">删除</li>
+    <li (click)="deleteItem(item)">删除</li>
+  </ul>
+</ng-template>

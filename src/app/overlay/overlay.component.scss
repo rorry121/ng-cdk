@@ -1,0 +1,43 @@
+.list {
+  list-style: none;
+  li {
+    margin: 10px;
+    background: #c5cae9;
+    cursor: pointer;
+    position: relative;
+    width: 248px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    &:hover {
+      background-color: #F3F5F6;
+    }
+    i {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      background: url("../../assets/more.svg") center center no-repeat;
+    }
+  }
+}
+.op {
+  border-radius: 8px;
+  width: auto;
+  padding: 8px 0;
+  background: #FFFFFF;
+  box-shadow: 0 0 8px rgba(16, 48, 102, 0.03), 0 12px 24px rgba(16, 48, 102, 0.16);
+  li {
+    padding: 8px 16px;
+    color: rgba(5, 16, 33, 0.72);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &:hover {
+      background-color: #F3F5F6;
+    }
+  }
+}

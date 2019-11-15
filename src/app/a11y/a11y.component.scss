@@ -1,0 +1,23 @@
+ul {
+  width: 200px;
+  list-style: none;
+  li {
+    line-height: 32px;
+    padding: 0 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: aliceblue;
+    &:hover {
+      color: rgba(10, 18, 32, 0.87);
+      background-color: rgba(232, 235, 237, 0.6);
+    }
+    &.focus {
+      z-index: 2;
+      color: #fff;
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+  }
+}

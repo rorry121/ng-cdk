@@ -1,0 +1,15 @@
+<button (click)="changeContent()"> change </button>
+
+<p>父</p>
+
+<div #observerSource>
+  {{content}}
+</div>
+
+
+<p>子</p>
+
+<app-observers-child>
+  {{content}}
+</app-observers-child>
+

@@ -1,0 +1,62 @@
+
+<p>显示不同的 templatePortal:</p>
+<div class="btn-wrap">
+  <button (click)="changePortal(0)">tab1-指令cdkPortal</button>
+  <button (click)="changePortal(1)">tab2-指令cdkPortal</button>
+  <button (click)="changePortal(2)">tab3-模板TemplateRef</button>
+</div>
+<div class="bg">
+  <div [cdkPortalOutlet]="currentPortal">
+    <p>无</p>
+  </div>
+</div>
+
+
+<ng-template cdkPortal>
+  <p>指令 cdkPortal</p>
+</ng-template>
+
+<!-- OR -->
+
+<!-- This result here is identical to the syntax above -->
+<p *cdkPortal>
+  语法糖 *cdkPortal
+</p>
+
+<!-- OR -->
+
+<ng-template #portalTemplate>
+  <p>模板 portalTemplate</p>
+</ng-template>
+
+
+
+
+<!--传值-->
+<p>传值 给 templateRef</p>
+
+<div class="btn-wrap">
+  <button (click)="fileClick(0)">点击算子一</button>
+  <button (click)="fileClick(1)">点击算子二</button>
+  <button (click)="fileClick(2)">点击算子三</button>
+
+  <button (click)="fileClick(3)">点击组件</button>
+</div>
+
+<div class="bg">
+  <div cdkPortalOutlet #portalOutlet="cdkPortalOutlet">
+    <p>无</p>
+  </div>
+</div>
+
+<ng-template #fileTemplate let-file let-myname="name">
+  <p>算子信息：</p>
+  <p>name: {{file.name}}</p>
+  <p>id: {{file.id}}</p>
+  <p>opt_id: {{file.opt_id}}</p>
+</ng-template>
+
+
+<!--DomPortalOutlet-->
+
+<!--omPortalOutlet就是操作DOM來做些事情，以及把產生的內容丟到一個<app-root>外的插座上，但其實它還是在管理範圍內，只是不住在<app-root>裡面而已-->

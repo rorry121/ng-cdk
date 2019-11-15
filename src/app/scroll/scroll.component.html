@@ -1,0 +1,3 @@
+<cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+  <div *cdkVirtualFor="let item of items; odd as isOdd" class="example-item" [ngClass]="{'odd': isOdd}">{{item}}</div>
+</cdk-virtual-scroll-viewport>
