@@ -1,4 +1,4 @@
-import { Component, forwardRef, Inject, OnInit } from '@angular/core';
+import { Component, forwardRef, Inject, OnInit, Optional } from '@angular/core';
 import { PORTALA_INJECT_DATA } from '../portal.component';
 
 @Component({
@@ -10,7 +10,7 @@ import { PORTALA_INJECT_DATA } from '../portal.component';
 export class PortalAComponent implements OnInit {
 
   constructor(
-    // @Inject(PORTALA_INJECT_DATA) public file: {id: string, name: string, opt_id: string}
+     @Optional() @Inject(PORTALA_INJECT_DATA) public file: {id: string, name: string, opt_id: string}
   ) { }
 
   ngOnInit() {

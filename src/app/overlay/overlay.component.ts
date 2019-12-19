@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
 import { ConnectedPosition, Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-overlay',
@@ -13,7 +14,8 @@ export class OverlayComponent implements OnInit {
   @ViewChild('operationTpl', {static: false}) operationTpl: TemplateRef<any>;
   constructor(
     private overlay: Overlay,
-    private vc: ViewContainerRef
+    private vc: ViewContainerRef,
+    private rotuer: Router
   ) { }
 
   ngOnInit() {
@@ -56,4 +58,7 @@ export class OverlayComponent implements OnInit {
     console.log(item);
   }
 
+  test() {
+    this.rotuer.navigate(['/a11y'], {queryParams: {data: 1}});
+  }
 }
